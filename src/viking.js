@@ -72,9 +72,10 @@ class War {
         for(let i = 0; i < this.saxonArmy.length ; i++){
 
             if(this.saxonArmy[i].receiveDamage(this.vikingArmy[i].strength) === "A Saxon has died in combat"){
-    
+                
+                let saxonDeath = "A Saxon has died in combat";
                 this.saxonArmy.pop();
-                return "A Saxon has died in combat";
+                return saxonDeath;
             }
             else{
                 return this.saxonArmy[i].receiveDamage(this.vikingArmy.strength);
